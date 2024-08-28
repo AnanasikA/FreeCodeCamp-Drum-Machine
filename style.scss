@@ -1,0 +1,64 @@
+$primary-color: #2a2a2a;
+$secondary-color: #444;
+$highlight-color: #f39c12;
+$white-color: #fff;
+
+body{
+    background-color: $primary-color;
+    color: $white-color;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#drum-machine {
+    background-color: $secondary-color;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+    background-color: $highlight-color;
+    color: $primary-color;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.drum-pad {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        background-color: $highlight-color;
+        color: $primary-color;
+        transform: scale(0.95);
+    }
+
+    &:active {
+        background-color: lighten($highlight-color, 10%);
+        transform: scale(0.95);
+    }
+}
+
+.drum-pad:focus {
+    outline: none;
+    background-color: $highlight-color;
+    color: $primary-color;
+}
